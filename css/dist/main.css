@@ -9,7 +9,8 @@
   --clr-light: #fff;
   --clr-accent: rgb(222, 52, 0);
   --clr-accent-dark: rgb(163, 38, 0);
-  --clr-secondary: rgb(0, 62, 163) ;
+  --clr-secondary: rgb(0, 62, 163);
+  --br: .5em;
 }
 
 body {
@@ -57,6 +58,9 @@ img {
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 85%, 0 100%);
 }
 
+.front .thumbnail {
+  border-radius: var(--br);
+}
 .front .name {
   margin: 0.75em 0;
 }
