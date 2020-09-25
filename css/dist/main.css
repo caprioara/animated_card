@@ -100,6 +100,9 @@ img {
   opacity: 0;
 }
 
+.movie:hover .rank {
+  opacity: 0;
+}
 .movie:hover .front {
   transform: translateY(-30%) scale(0.8);
 }

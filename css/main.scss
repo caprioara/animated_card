@@ -108,6 +108,10 @@ img {
 }
 
 .movie:hover {
+    .rank {
+        opacity: 0;
+    }
+
     .front {
         transform: translateY(-30%) scale(.8);
 
