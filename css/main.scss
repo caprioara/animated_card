@@ -13,9 +13,38 @@
 }
 
 body {
+    font-family: sans-serif;
     min-height: 100vh;
     display: grid;
     place-items: center;
     background: var(--clr-dark);
     color: var(--clr-light);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.movie {
+    position: relative;
+    width: 12.5em;
+}
+
+.sources {
+    display: flex;
+}
+
+.front {
+    
+}
+
+.back {
+    display: none;
 }
