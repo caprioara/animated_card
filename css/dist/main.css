@@ -101,13 +101,14 @@ img {
 .back {
   opacity: 0;
   position: absolute;
-  bottom: 0;
+  top: 55%;
   left: 0;
   right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1em;
+  gap: 1.5em;
+  transform: translateY(35%);
 }
 .back .streaming-info {
   margin: 0.6em 0;
@@ -124,7 +125,7 @@ img {
 }
 
 .background {
-  background: #234;
+  background: #282e36;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -137,7 +138,8 @@ img {
 }
 
 .movie:hover .rank {
-  transform: translate(150%, -96%);
+  transform: translate(150%, -121%);
+  background: red;
 }
 .movie:hover .front {
   transform: translateY(-30%) scale(0.8);
@@ -150,6 +152,8 @@ img {
 }
 .movie:hover .back {
   opacity: 1;
+  transform: translateY(0);
+  transition: transform 250ms ease, opacity 150ms linear;
 }
 .movie:hover .back .sources {
   width: 100%;
@@ -164,7 +168,7 @@ img {
 .movie:hover .background {
   transition: var(--transition) opacity 100ms linear;
   opacity: 1;
-  transform: scale(1.4, 1.2);
+  transform: scale(1.4, 1.25);
 }
 
 @keyframes movieName {
