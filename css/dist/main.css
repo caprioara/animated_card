@@ -87,6 +87,13 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+.front .viewers::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
 .front .sources img {
   border: 2px solid var(--clr-dark);
 }
