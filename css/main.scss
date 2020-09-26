@@ -12,6 +12,7 @@
     --clr-secondary: rgb(0, 62, 163);
 
     --br: .5em;
+    --transition: transform 250ms cubic-bezier(.21, 1.06, .81, 1.01);
 }
 
 body {
@@ -50,14 +51,17 @@ img {
 }
 
 .rank {
+
     position: absolute;
     font-weight: bold;
     top: 0;
     right: 1em;
+    z-index: 1000;
     font-weight: 1.125rem;
     background: rgba(0, 0, 0, .65);
     padding: .5em .5em .75em;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 85%, 0 100%);
+    transition: var(--transition)
 }
 
 .front {
@@ -91,7 +95,27 @@ img {
 }
 
 .back {
-    display: none;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .streaming-info {
+        margin: 1em 0;
+        columns: 2;
+        column-rule: 1px solid rgba(255, 255, 255, .25);
+    }
+
+    .movie-stat {
+        font-size: 1.125rem;
+        text-align: center;
+
+        span {
+            font-size: .85rem;
+            display: block;
+        }
+    }
 }
 
 .background {
@@ -109,7 +133,7 @@ img {
 
 .movie:hover {
     .rank {
-        opacity: 0;
+        transform: translate(150%, -96%)
     }
 
     .front {
@@ -125,9 +149,13 @@ img {
         }
     }
 
+    .back {
+        opacity: 1;
+    }
+
     .background {
         transition:
-            transform 250ms cubic-bezier(.21, 1.06, .81, 1.01),
+            var(--transition)
             opacity 100ms linear;
         opacity: 1;
         transform: scale(1.4, 1.2);
