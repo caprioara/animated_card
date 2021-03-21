@@ -148,6 +148,15 @@ img {
     transform: scale(.2, .9);
     border-radius: var(--br);
     opacity: 0;
+    overflow: hidden;
+
+    img {
+        opacity: 0.35;
+        clip-path: url(#wave);
+        height: 20%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 .movie:hover {

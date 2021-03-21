@@ -135,6 +135,14 @@ img {
   transform: scale(0.2, 0.9);
   border-radius: var(--br);
   opacity: 0;
+  overflow: hidden;
+}
+.background img {
+  opacity: 0.35;
+  clip-path: url(#wave);
+  height: 20%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .movie:hover .rank {
